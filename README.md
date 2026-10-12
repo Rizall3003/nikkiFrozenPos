@@ -88,62 +88,55 @@ nikky-frozen-pos/
 
 ---
 
-### Import Database
+### Langkah Instalasi
 
-Download database dari Google Drive:
+1. **Clone Repositori**
+   ```bash
+   git clone https://github.com/Rizall3003/nikkiFrozenPos.git 
+   cd nikky-frozen-pos
+Install Dependensi
+Jalankan perintah berikut di terminal:
 
-https://drive.google.com/drive/folders/1I8uDXJpVJyO8V327RIEC0Zvpt7Y5TlHO?usp=drive_link
-
-Import file database.sql ke MySQL/phpMyAdmin.
-
-### Download Folder Gambar Produk
-
-Download folder products dari Google Drive:
-
-https://drive.google.com/drive/folders/1G4I_EWabs2AvgKsjUqs9eNochHbRq0lc?usp=drive_link
-
-Salin folder tersebut ke:
-
-```
-backend/storage/app/public/products
-```
-
-## ⚙️ Instalasi
-
-### Clone Repository
-
-```bash
-git clone https://github.com/USERNAME/nikky-frozen-pos.git
-cd nikky-frozen-pos
-```
-
-### Backend
-
-```bash
-cd backend
-
+Bash
 composer install
-
-cp .env.example .env
-
-php artisan key:generate
-
-php artisan migrate
-
-php artisan serve
-```
-
-### Frontend
-
-```bash
-cd frontend
-
 npm install
+Konfigurasi Environment (.env)
 
+Salin file .env.example menjadi .env.
+
+Buka file .env dan atur koneksi database Anda:
+
+Cuplikan kode
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=nikky-frozen-pos
+DB_USERNAME=root
+DB_PASSWORD=
+Generate App Key
+
+Bash
+php artisan key:generate
+Import Database 🗄️
+
+Buat database baru di MySQL (nikky-frozen-pos).
+
+Import file nikky_frozen_pos.sql yang ada di repositori ini ke dalam database yang baru saja Anda buat. File ini sudah berisi skema tabel dan data awal.
+
+Konfigurasi Foto Produk 🖼️
+
+Salin atau pindahkan folder products yang ada di luar ke dalam direktori storage/app/public/.
+
+Setelah dipindahkan, jalankan perintah storage link agar gambar dapat diakses oleh sistem:
+
+Bash
+php artisan storage:link
+Jalankan Aplikasi
+
+Bash
 npm run dev
-```
-
----
+php artisan serve
+Buka http://localhost:8000 di browser Anda.
 
 ## 🔑 Konfigurasi Midtrans
 
@@ -154,13 +147,3 @@ MIDTRANS_SERVER_KEY=YOUR_SERVER_KEY
 MIDTRANS_CLIENT_KEY=YOUR_CLIENT_KEY
 MIDTRANS_IS_PRODUCTION=false
 ```
-
-## 👨‍💻 Developer
-
-Dikembangkan sebagai Project UTS Pemrograman.
-
-Nama: Iqbal Maulana
-
-Universitas: UNIVERSITAS AMIKOM YOGYAKARTA
-
-Tahun: 2026
