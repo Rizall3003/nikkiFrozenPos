@@ -80,29 +80,6 @@ Setiap aktivitas penting pengguna dapat dicatat untuk membantu menjaga keamanan 
 - Riwayat aktivitas sistem
 
 ---
-
-# 🖥️ Preview
-
-> Tambahkan screenshot aplikasi di bagian ini agar repository terlihat lebih profesional.
-
-### Dashboard
-
-![Dashboard](docs/images/dashboard.png)
-
-### Point of Sale
-
-![POS](docs/images/pos.png)
-
-### Manajemen Produk
-
-![Products](docs/images/products.png)
-
-### Laporan Keuangan
-
-![Finance](docs/images/finance.png)
-
----
-
 # 🏗️ Arsitektur Sistem
 
 ```text
@@ -192,9 +169,6 @@ nikky-frozen-pos/
 │   ├── storage/
 │   ├── .env.example
 │   └── composer.json
-│
-├── docs/
-│   └── images/
 │
 └── README.md
 ```
@@ -513,10 +487,6 @@ git push origin feature/nama-fitur
 Project ini dikembangkan untuk kebutuhan pembelajaran dan pengembangan sistem Point of Sale.
 
 ---
-
-# 👨‍💻 Developer
-
-**Rizal Anggoro**
 
 Nikky Frozen POS — Web-based Point of Sale System
 
